@@ -21,10 +21,10 @@ def run_command(command):
 
 def main():
     print("Working")
-    weights_path = get_system_path(r'C:\Users\farih\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\best3class1050.pt')
-    source_image_path = get_system_path(r'C:\Users\farih\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\test\1-317 _101020735.jpg')
-    model1 = r'C:\Users\farih\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\detect_building_type.py'
-    model2 = r'C:\Users\farih\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\detect3.py'
+    weights_path = get_system_path(r'C:\Users\User\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\best3class1050.pt')
+    source_image_path = get_system_path(r'C:\Users\User\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\test\Mustamae_buildings\sidefacaseac26.png')
+    model1 = r'C:\Users\User\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\detect_building_type.py'
+    model2 = r'C:\Users\User\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\detect.py'
 
     # Run the first model
     command1 = [
@@ -48,7 +48,7 @@ def main():
                 output_directory = str(pathlib.Path(path_match.group(1)).parent)
 
                 # Prepare and run the second model
-                second_model_weights = get_system_path(r'C:\Users\farih\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\door_window_detector.pt')
+                second_model_weights = get_system_path(r'C:\Users\User\TTU\Github\Building_image_train\script\facade_test_yolov5\yolov5\door_window_detector.pt')
                 second_model_command = [
                     sys.executable,
                     model2,
